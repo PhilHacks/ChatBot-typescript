@@ -1,8 +1,6 @@
-import { ChatBot } from "./ChatBot";
-
-import * as readline from 'node:readline/promises';
-import { stdin as input, stdout as output } from 'node:process';
-
+const ChatBot = require('./ChatBot').ChatBot;
+const readline = require('readline/promises');
+const { stdin: input, stdout: output } = require('process');
 
 const chatBotInstance = new ChatBot();
 
