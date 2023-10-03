@@ -4,8 +4,6 @@ const { stdin: input, stdout: output } = require('process');
 
 const chatBotInstance = new ChatBot();
 
-const rl = readline.createInterface({ input, output });
-
 
 async function main () {
     const rl = readline.createInterface({ input, output });
