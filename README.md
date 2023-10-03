@@ -87,6 +87,8 @@ Type `greet` and press enter. The chatbot will return "Here is the greet text".
 
 Type `weather` and press enter. The chatbot will return "Here is The weather: Sunny and 25°C".
 
+![Prompts in command line](https://github.com/PhilHacks/ChatBot-typescript/blob/main/img/chatbot-ts.png)
+
 ### **4. Project Structure**
 
 #### **Directory Structure:**
