@@ -112,6 +112,7 @@ The project is organized as follows:
 #### **Frameworks/Libraries:**
 
 - Node.js
+- readline: Used for creating an interactive command-line interface.
 
 ---
 
