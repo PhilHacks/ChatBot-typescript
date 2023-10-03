@@ -9,7 +9,7 @@ async function main () {
     const rl = readline.createInterface({ input, output });
 
     while (true) {
-        const command = await rl.question("Enter the commands 'Help', 'Greet', 'Weather' or type 'exit' to quit:");
+        const command = await rl.question("Enter the commands 'help', 'greet', 'weather' or type 'exit' to quit:");
 
         if (command.toLowerCase()=== "exit") {
             console.log("Goodbye!");

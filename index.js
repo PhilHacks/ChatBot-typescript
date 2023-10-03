@@ -16,7 +16,7 @@ function main() {
     return __awaiter(this, void 0, void 0, function* () {
         const rl = readline.createInterface({ input, output });
         while (true) {
-            const command = yield rl.question("Enter the commands 'Help', 'Greet', 'Weather' or type 'exit' to quit:");
+            const command = yield rl.question("Enter the commands 'help', 'greet', 'weather' or type 'exit' to quit:");
             if (command.toLowerCase() === "exit") {
                 console.log("Goodbye!");
                 rl.close();
