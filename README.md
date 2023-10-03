@@ -85,7 +85,7 @@ Type `greet` and press enter. The chatbot will return "Here is the greet text".
 
 ##### Using Weather Command:
 
-Type `weather` and press enter. The chatbot will return "Here is The weather sunny and 25°C."
+Type `weather` and press enter. The chatbot will return "Here is The weather: Sunny and 25°C".
 
 ### **4. Project Structure**
 
