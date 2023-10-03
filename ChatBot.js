@@ -13,7 +13,7 @@ class GreetCommand {
 }
 class WeatherCommand {
     execute(input) {
-        return "Here is The weather sunny and 25°C.";
+        return "Here is The weather: Sunny and 25°C.";
     }
 }
 class ChatBot {
