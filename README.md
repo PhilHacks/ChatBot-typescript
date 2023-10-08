@@ -21,7 +21,7 @@
 ### **1. Project Overview**
 
 - **Project Name:** ChatBotApp
-- **Description:** ChatBotApp is a simple command-line interface chatbot developed using Node.js. It can respond to specific commands such as "help", "greet", and "weather". The application is designed using the Command design pattern, allowing for easy scalability and addition of new commands in the future.
+- **Description:** ChatBotApp is a simple command-line interface chatbot developed using Node.js and Typescript. It can respond to specific commands such as "help", "greet", and "weather". The application is designed so that it can easily be scaled up with new commands.
 
 ### **2. Installation and Setup**
 
@@ -87,6 +87,8 @@ Type `greet` and press enter. The chatbot will return "Here is the greet text".
 
 Type `weather` and press enter. The chatbot will return "Here is The weather: Sunny and 25°C".
 
+![Prompts in command line](https://github.com/PhilHacks/ChatBot-typescript/blob/main/img/chatbot-ts.png)
+
 ### **4. Project Structure**
 
 #### **Directory Structure:**
@@ -115,5 +117,3 @@ The project is organized as follows:
 - readline: Used for creating an interactive command-line interface.
 
 ---
-
-Du kan kopiera ovanstående text och lägga till den i en `README.md`-fil i ditt projekt. Justera länkar eller andra specifika detaljer efter behov.
