@@ -38,24 +38,24 @@ describe('Unknown commands', () => {
     })
 })
 
-describe('Execute Command', () => {
+describe('Execute Command metod', () => {
     let bot: ChatBot;
 
     beforeEach (() => {
         bot = new ChatBot();
     });
 
-    it('should delegate to the help case', () => {
+    it('should return a string with the help text when "help" command is invoked', () => {
         const result = bot.executeCommand("help");
         expect(result).toBe("Here is the help text");
     })
 
-    it('should delegate to the greet case', () => {
+    it('should return a string with the greet text when "greet" command is invoked', () => {
         const result = bot.executeCommand("greet");
         expect(result).toBe("Here is the greet text");
     })
 
-    it('should delegate to the weather case', () => {
+    it('should return a string with the weather when "weather" command is invoked', () => {
         const result = bot.executeCommand("weather");
         expect(result).toBe("Here is The weather: Sunny and 25°C.");
     })
