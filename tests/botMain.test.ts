@@ -34,6 +34,33 @@ describe('Unknown commands', () => {
     it('should return a string "unknown command"', () => {
         const bot = new ChatBot();
         const result = bot.executeCommand("non_existent_command");
-        expect(result).toBe("Unknown command.");
+        expect(result).toBe("Unknown command");
     })
+})
+
+describe('Execute Command', () => {
+    it('should delegate to the help case', () => {
+        const bot = new ChatBot();
+        const result = bot.executeCommand("help");
+        expect(result).toBe("Here is the help text");
+    })
+
+    it('should delegate to the greet case', () => {
+        const bot = new ChatBot();
+        const result = bot.executeCommand("greet");
+        expect(result).toBe("Here is the greet text");
+    })
+
+    it('should delegate to the weather case', () => {
+        const bot = new ChatBot();
+        const result = bot.executeCommand("weather");
+        expect(result).toBe("Here is The weather: Sunny and 25°C.");
+    })
+
+    it('should delegate to default', () => {
+        const bot = new ChatBot();
+        const result = bot.executeCommand("non_existent_command");
+        expect(result).toBe("Unknown command");
+    })
+
 })
