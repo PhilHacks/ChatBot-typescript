@@ -27,14 +27,10 @@ class ChatBot {
     }
     executeCommand(command) {
         switch (command) {
-            case "help":
-                return this.helpCommand.execute(command);
-            case "greet":
-                return this.greetCommand.execute(command);
-            case "weather":
-                return this.weatherCommand.execute(command);
-            default:
-                return "Unknown command.";
+            case "help": return this.helpCommand.execute(command);
+            case "greet": return this.greetCommand.execute(command);
+            case "weather": return this.weatherCommand.execute(command);
+            default: return "Unknown command";
         }
     }
 }
