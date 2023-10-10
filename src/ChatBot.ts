@@ -19,7 +19,7 @@ export class GreetCommand implements Command {
 
 export class WeatherCommand implements Command {
     execute(input: string): string {
-        return "Here is The weather: Sunny and 25 celsius";
+        return "Here is The weather: Sunny and 25°C.";
     }
 }
 
