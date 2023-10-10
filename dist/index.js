@@ -8,17 +8,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const ChatBot_1 = require("./ChatBot");
-const promises_1 = __importDefault(require("readline/promises"));
-const process_1 = require("process");
-const chatBotInstance = new ChatBot_1.ChatBot();
+const ChatBot = require('./ChatBot').ChatBot;
+const readline = require('readline/promises');
+const { stdin: input, stdout: output } = require('process');
+const chatBotInstance = new ChatBot();
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
-        const rl = promises_1.default.createInterface({ input: process_1.stdin, output: process_1.stdout });
+        const rl = readline.createInterface({ input, output });
         while (true) {
             const command = yield rl.question("Enter the commands 'help', 'greet', 'weather' or type 'exit' to quit:");
             if (command.toLowerCase() === "exit") {
