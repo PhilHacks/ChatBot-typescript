@@ -58,7 +58,7 @@ To set up ChatBotApp locally:
 4. Run the application:
 
    ```bash
-   node index.js
+   npm start
    ```
 
    The ChatBotApp will now be running in your terminal.
