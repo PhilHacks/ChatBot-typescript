@@ -17,8 +17,13 @@
 - [Technologies Used](#technologies-used)
   - [Languages](#languages)
   - [Frameworks/Libraries](#frameworkslibraries)
+- [Testing](#testing)
+  - [Running Tests](#running-tests)
+  - [Test Cases Overview](#test-cases-overview)
+---
 
 ### **1. Project Overview**
+
 
 - **Project Name:** ChatBotApp
 - **Description:** ChatBotApp is a simple command-line interface chatbot developed using Node.js and Typescript. It can respond to specific commands such as "help", "greet", and "weather". The application is designed so that it can easily be scaled up with new commands.
@@ -116,4 +121,30 @@ The project is organized as follows:
 - Node.js
 - readline: Used for creating an interactive command-line interface.
 
----
+Here's the provided content formatted in Markdown:
+
+### **6. Testing**
+
+The ChatBot application is equipped with a suite of tests to ensure its functionality and robustness. These tests cover individual command classes, the main `executeCommand` method, and various edge cases.
+
+#### **Running Tests:**
+
+To run the tests, navigate to the project directory and execute:
+
+```bash
+npm test
+```
+
+#### **Test Cases Overview:**
+
+- **Individual Command Classes:** Tests the functionality of each command class (HelpCommand, GreetCommand, and WeatherCommand).
+
+- **Unknown Commands:** Ensures that any unknown or undefined command returns the "Unknown command" response.
+
+- **Execute Command Method:** Tests the main `executeCommand` method in the ChatBot class to ensure it correctly delegates to the appropriate command class.
+
+- **Edge Cases:** Tests various edge cases, such as providing undefined or malformed commands.
+
+For details of tests, see `botMain.test.ts` in the `test` folder of the project.
+
+
