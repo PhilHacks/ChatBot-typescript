@@ -66,9 +66,19 @@ describe('Execute Command metod', () => {
 
 
 describe('Edge cases', () => {
-    it('should return "unknown command" when an empty sting is provided', () => {
-        const bot = new ChatBot();
-        const result = bot.executeCommand(" ");
+    let bot: ChatBot;
+
+    beforeEach (() => {
+        bot = new ChatBot();
+    });
+    
+    it('should return "unknown command" when a undefined command is provided', () => {
+        const result = bot.executeCommand(undefined as any);
+        expect(result).toBe("Unknown command");
+    })
+
+    it('should return "unknown command" when a malformed command is provided', () => {
+        const result = bot.executeCommand("gr@@t");
         expect(result).toBe("Unknown command");
     })
 })
