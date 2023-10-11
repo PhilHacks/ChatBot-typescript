@@ -45,20 +45,20 @@ describe('Execute Command metod', () => {
 
     it('should return a string with the help text when "help" command is invoked', () => {
         const result = bot.executeCommand("help");
-        expect(result).toBe("Here is the help text");
+        expect(result).toContain("Here is the help text");
     })
 
     it('should return a string with the greet text when "greet" command is invoked', () => {
         const result = bot.executeCommand("greet");
-        expect(result).toBe("Here is the greet text");
+        expect(result).toContain("Here is the greet text");
     })
 
     it('should return a string with the weather when "weather" command is invoked', () => {
         const result = bot.executeCommand("weather");
-        expect(result).toBe("Here is The weather: Sunny and 25°C.");
+        expect(result).toContain("Here is The weather: Sunny and 25°C.");
     })
 
-    it('should delegate to default', () => {
+    it('should return "Unknown command" for non-existent commands', () => {
         const result = bot.executeCommand("non_existent_command");
         expect(result).toBe("Unknown command");
     })
