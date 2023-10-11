@@ -1,26 +1,18 @@
-# ChatBot-typescript
+# 🤖ChatBot-typescript
 
 **Table of Contents**
-- [Project Overview](#project-overview)
-- [Installation and Setup](#installation-and-setup)
+- [Project Overview](#1-project-overview)
+- [Installation and Setup](#2-installation-and-setup)
   - [Requirements](#requirements)
   - [Installation](#installation)
-- [Project Features](#project-features)
+- [Project Features](#3-project-features)
   - [List of Features](#list-of-features)
   - [Usage Examples](#usage-examples)
-    - [Using Help Command](#using-help-command)
-    - [Using Greet Command](#using-greet-command)
-    - [Using Weather Command](#using-weather-command)
-- [Project Structure](#project-structure)
-  - [Directory Structure](#directory-structure)
-  - [Key Files](#key-files)
-- [Technologies Used](#technologies-used)
-  - [Languages](#languages)
-  - [Frameworks/Libraries](#frameworkslibraries)
-- [Testing](#testing)
-  - [Running Tests](#running-tests)
-  - [Test Cases Overview](#test-cases-overview)
+- [Project Structure](#4-project-structure)
+- [Technologies Used](#5-technologies-used)
+- [Testing](#6-testing)
 ---
+
 
 ### **1. Project Overview**
 
@@ -137,7 +129,7 @@ npm test
 
 #### **Test Cases Overview:**
 
-- **Individual Command Classes:** Tests the functionality of each command class (HelpCommand, GreetCommand, and WeatherCommand).
+- **Individual Command Classes:** Tests the functionality of each command class (`HelpCommand`, `GreetCommand`, and `WeatherCommand`).
 
 - **Unknown Commands:** Ensures that any unknown or undefined command returns the "Unknown command" response.
 
@@ -145,6 +137,6 @@ npm test
 
 - **Edge Cases:** Tests various edge cases, such as providing undefined or malformed commands.
 
-For details of tests, see `botMain.test.ts` in the `test` folder of the project.
+For details of tests, see [botMain.test.ts](test/botMain.test.ts) file.
 
 
