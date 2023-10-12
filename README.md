@@ -1,66 +1,61 @@
 # 🤖ChatBot-typescript
 
-**Table of Contents**
+## Table of Contents
 - [Project Overview](#1-project-overview)
 - [Installation and Setup](#2-installation-and-setup)
-  - [Requirements](#requirements)
-  - [Installation](#installation)
 - [Project Features](#3-project-features)
-  - [List of Features](#list-of-features)
-  - [Usage Examples](#usage-examples)
 - [Project Structure](#4-project-structure)
 - [Technologies Used](#5-technologies-used)
 - [Testing](#6-testing)
----
 
 
-### **1. Project Overview**
+## 1. Project Overview
 
 
 - **Project Name:** ChatBotApp
 - **Description:** ChatBotApp is a simple command-line interface chatbot developed using Node.js and Typescript. It can respond to specific commands such as "help", "greet", and "weather". The application is designed so that it can easily be scaled up with new commands.
 
-### **2. Installation and Setup**
+## 2. Installation and Setup
 
-#### **Requirements:**
+### Prerequisites
+- **Node.js:** Installed from [nodejs.org](https://nodejs.org/).
+- **npm:** Bundled with Node.js. Check with `npm -v`.
 
-Before you can run ChatBotApp, ensure you have the following prerequisites:
-
-- **Node.js:** Ensure Node.js is installed. Download it from [nodejs.org](https://nodejs.org/).
-
-- **npm (Node Package Manager):** npm comes bundled with Node.js. Verify its installation by running `npm -v` in your terminal.
-
-#### **Installation:**
-
-To set up ChatBotApp locally:
-
-1. Clone the repository:
-
+### Installation
+1. **Clone the Repository:**
    ```bash
    git clone https://github.com/your-username/chatbot-app.git
    ```
 
-2. Navigate to the project directory:
-
+2. **Enter the Project Directory:**
    ```bash
    cd chatbot-app
    ```
 
-3. Install project dependencies:
-
+3. **Install Dependencies:**
    ```bash
    npm install
    ```
 
-4. Run the application:
-
+4. **Run the Application:**
    ```bash
    npm start
    ```
 
-   The ChatBotApp will now be running in your terminal.
+   This starts the ChatBotApp in your terminal.
 
-### **3. Project Features**
+### Dependencies
+- **@types/node**: TypeScript definitions for Node.js.
+
+### Dev Dependencies
+- **@types/jest**: TypeScript definitions for Jest.
+- **jest**: JavaScript Testing Framework.
+- **ts-jest**: TypeScript preprocessor for Jest.
+- **typescript**: Application-scale JavaScript development.
+
+> For a detailed list of dependencies, see the `package.json` file.
+
+## 3. Project Features
 
 #### **List of Features:**
 
@@ -86,7 +81,7 @@ Type `weather` and press enter. The chatbot will return "Here is The weather: Su
 
 ![Prompts in command line](https://github.com/PhilHacks/ChatBot-typescript/blob/main/img/chatbot-ts.png)
 
-### **4. Project Structure**
+## 4. Project Structure
 
 #### **Directory Structure:**
 
@@ -102,7 +97,7 @@ The project is organized as follows:
 
 - `index.ts`: Initializes the command-line interface and user interaction.
 
-### **5. Technologies Used**
+## 5. Technologies Used
 
 #### **Languages:**
 
@@ -113,7 +108,7 @@ The project is organized as follows:
 - Node.js
 - readline: Used for creating an interactive command-line interface.
 
-### **6. Testing**
+## 6. Testing
 
 The ChatBot application is equipped with a suite of tests to ensure its functionality and robustness. These tests cover individual command classes, the main `executeCommand` method, and various edge cases.
 
@@ -137,6 +132,6 @@ npm test
   
 ![Tests](https://github.com/PhilHacks/ChatBot-typescript/blob/main/img/tests.png)
 
-- For details of tests, see [botMain.test.ts](test/botMain.test.ts) file.
+> For detailed test information, refer to the [botMain.test.ts](test/botMain.test.ts) file.
 
 
