@@ -17,11 +17,11 @@
 
 ## 2. Installation and Setup
 
-### Prerequisites
+### **Prerequisites**
 - **Node.js:** Installed from [nodejs.org](https://nodejs.org/).
 - **npm:** Bundled with Node.js. Check with `npm -v`.
 
-### Installation
+### **Installation**
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/your-username/chatbot-app.git
@@ -44,10 +44,10 @@
 
    This starts the ChatBotApp in your terminal.
 
-### Dependencies
+### **Dependencies**
 - **@types/node**: TypeScript definitions for Node.js.
 
-### Dev Dependencies
+### **Dev Dependencies**
 - **@types/jest**: TypeScript definitions for Jest.
 - **jest**: JavaScript Testing Framework.
 - **ts-jest**: TypeScript preprocessor for Jest.
@@ -57,7 +57,7 @@
 
 ## 3. Project Features
 
-#### **List of Features:**
+### **List of Features:**
 
 - **Help Command:** Provides guidance on how to use the chatbot.
   
@@ -65,7 +65,7 @@
   
 - **Weather Command:** Returns a predefined weather message.
 
-#### **Usage Examples:**
+### **Usage Examples:**
 
 ##### Using Help Command:
 
@@ -83,7 +83,7 @@ Type `weather` and press enter. The chatbot will return "Here is The weather: Su
 
 ## 4. Project Structure
 
-#### **Directory Structure:**
+### **Directory Structure:**
 
 The project is organized as follows:
 
@@ -91,7 +91,7 @@ The project is organized as follows:
 
 - `index.ts`: Initializes the command-line interface and interacts with the ChatBot class.
 
-#### **Key Files:**
+### **Key Files:**
 
 - `ChatBot.ts`: The core logic for chatbot command execution.
 
@@ -112,7 +112,7 @@ The project is organized as follows:
 
 The ChatBot application is equipped with a suite of tests to ensure its functionality and robustness. These tests cover individual command classes, the main `executeCommand` method, and various edge cases.
 
-#### **Running Tests:**
+### **Running Tests:**
 
 To run the tests, navigate to the project directory and execute:
 
@@ -120,7 +120,7 @@ To run the tests, navigate to the project directory and execute:
 npm test
 ```
 
-#### **Test Cases Overview:**
+### **Test Cases Overview:**
 
 - **Individual Command Classes:** Tests the functionality of each command class (`HelpCommand`, `GreetCommand`, and `WeatherCommand`).
 
