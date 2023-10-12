@@ -113,8 +113,6 @@ The project is organized as follows:
 - Node.js
 - readline: Used for creating an interactive command-line interface.
 
-Here's the provided content formatted in Markdown:
-
 ### **6. Testing**
 
 The ChatBot application is equipped with a suite of tests to ensure its functionality and robustness. These tests cover individual command classes, the main `executeCommand` method, and various edge cases.
