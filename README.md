@@ -136,7 +136,9 @@ npm test
 - **Execute Command Method:** Tests the main `executeCommand` method in the ChatBot class to ensure it correctly delegates to the appropriate command class.
 
 - **Edge Cases:** Tests various edge cases, such as providing undefined or malformed commands.
+  
+![Tests](https://github.com/PhilHacks/ChatBot-typescript/blob/main/img/tests.png)
 
-For details of tests, see [botMain.test.ts](test/botMain.test.ts) file.
+- For details of tests, see [botMain.test.ts](test/botMain.test.ts) file.
 
 
