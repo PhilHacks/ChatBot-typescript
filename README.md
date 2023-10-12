@@ -13,7 +13,7 @@
 
 
 - **Project Name:** ChatBotApp
-- **Description:** ChatBotApp is a simple command-line interface chatbot developed using Node.js and Typescript. It can respond to specific commands such as "help", "greet", and "weather". The application is designed so that it can easily be scaled up with new commands.
+- **Description:** ChatBotApp is a simple command-line interface chatbot developed using Node.js and Typescript. It can respond to specific commands such as "help", "greet", and "weather". The application is designed so that it can easily be scaled up with new commands. Comprehensive tests have been implemented to ensure the chatbot's functionality and reliability.
 
 ## 2. Installation and Setup
 
