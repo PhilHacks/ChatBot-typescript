@@ -21,17 +21,17 @@ class WeatherCommand {
 exports.WeatherCommand = WeatherCommand;
 class ChatBot {
     constructor() {
-        this.helpCommand = new HelpCommand();
-        this.greetCommand = new GreetCommand();
-        this.weatherCommand = new WeatherCommand();
+        this.commandMap = new Map();
+        this.commandMap.set("help", new HelpCommand());
+        this.commandMap.set("greet", new GreetCommand());
+        this.commandMap.set("weather", new WeatherCommand());
     }
     executeCommand(command) {
-        switch (command) {
-            case "help": return this.helpCommand.execute(command);
-            case "greet": return this.greetCommand.execute(command);
-            case "weather": return this.weatherCommand.execute(command);
-            default: return "Unknown command";
+        const selectedCommand = this.commandMap.get(command.toLowerCase());
+        if (selectedCommand) {
+            return selectedCommand.execute(command);
         }
+        return "Unknown command";
     }
 }
 exports.ChatBot = ChatBot;

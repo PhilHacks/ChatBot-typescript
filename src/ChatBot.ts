@@ -26,16 +26,19 @@ export class WeatherCommand implements Command {
 
 //Chatbot Class (uses cmd class to execute cmd)
 export class ChatBot {
-    private helpCommand = new HelpCommand();
-    private greetCommand = new GreetCommand();
-    private weatherCommand = new WeatherCommand();
+    private commandMap = new Map<string, Command>();
 
+    constructor() {
+        this.commandMap.set("help", new HelpCommand());
+        this.commandMap.set("greet", new GreetCommand());
+        this.commandMap.set("weather",new WeatherCommand());
+    }
+   
     executeCommand(command: string): string {
-        switch(command) {
-            case "help": return this.helpCommand.execute(command);
-            case "greet": return this.greetCommand.execute(command);
-            case "weather": return this.weatherCommand.execute(command);
-            default: return "Unknown command";
+        const selectedCommand = this.commandMap.get(command);
+        if(selectedCommand) {
+            return selectedCommand.execute(command); 
         }
+        return "Unknown command";
     }
 }
