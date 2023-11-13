@@ -27,11 +27,16 @@ class ChatBot {
         this.commandMap.set("weather", new WeatherCommand());
     }
     executeCommand(command) {
-        const selectedCommand = this.commandMap.get(command);
-        if (selectedCommand) {
-            return selectedCommand.execute(command);
+        try {
+            const selectedCommand = this.commandMap.get(command);
+            if (selectedCommand) {
+                return selectedCommand.execute(command);
+            }
+            throw new Error("Unknown command");
         }
-        return "Unknown command";
+        catch (error) {
+            return error.message;
+        }
     }
 }
 exports.ChatBot = ChatBot;

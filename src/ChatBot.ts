@@ -35,10 +35,14 @@ export class ChatBot {
     }
    
     executeCommand(command: string): string {
-        const selectedCommand = this.commandMap.get(command);
-        if(selectedCommand) {
-            return selectedCommand.execute(command); 
+        try {
+            const selectedCommand = this.commandMap.get(command);
+            if(selectedCommand) {
+                return selectedCommand.execute(command); 
         }
-        return "Unknown command";
+        throw new Error("Unknown command");
+        } catch (error) {
+            return (error as Error).message;
+        }
     }
-}
+} 
