@@ -19,12 +19,13 @@ const chatBotInstance = new ChatBot_1.ChatBot();
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
         const rl = promises_1.default.createInterface({ input: process_1.stdin, output: process_1.stdout });
-        while (true) {
+        let isRunning = true;
+        while (isRunning) {
             const command = yield rl.question("Enter the commands 'help', 'greet', 'weather' or type 'exit' to quit:");
             if (command.toLowerCase() === "exit") {
                 console.log("Goodbye!");
                 rl.close();
-                break;
+                isRunning = false;
             }
             const response = chatBotInstance.executeCommand(command);
             console.log(response);

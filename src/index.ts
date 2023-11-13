@@ -8,13 +8,14 @@ const chatBotInstance: ChatBot = new ChatBot();
 async function main () {
     const rl = readline.createInterface({ input, output });
 
-    while (true) {
+    let isRunning = true;
+    while (isRunning) {
         const command = await rl.question("Enter the commands 'help', 'greet', 'weather' or type 'exit' to quit:");
 
         if (command.toLowerCase()=== "exit") {
             console.log("Goodbye!");
             rl.close();
-            break;
+            isRunning = false
         }
 
         const response = chatBotInstance.executeCommand(command);
