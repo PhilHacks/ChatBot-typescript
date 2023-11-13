@@ -27,7 +27,7 @@ class ChatBot {
         this.commandMap.set("weather", new WeatherCommand());
     }
     executeCommand(command) {
-        const selectedCommand = this.commandMap.get(command.toLowerCase());
+        const selectedCommand = this.commandMap.get(command);
         if (selectedCommand) {
             return selectedCommand.execute(command);
         }
