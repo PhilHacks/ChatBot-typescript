@@ -10,18 +10,24 @@ async function main () {
 
     let isRunning = true;
     while (isRunning) {
-        const command = await rl.question("Enter the commands 'help', 'greet', 'weather' or type 'exit' to quit:");
-
-        if (command.toLowerCase()=== "exit") {
-            console.log("Goodbye!");
-            rl.close();
-            isRunning = false
+        try {
+            const command = await rl.question(
+                "Enter the commands 'help', 'greet', 'weather' or type 'exit' to quit:"
+            );
+    
+            if (command.toLowerCase()=== "exit") {
+                console.log("Goodbye!");
+                rl.close();
+                isRunning = false
+            } else {
+                const response = chatBotInstance.executeCommand(command);
+                console.log(response);
+            }
+        } catch (error) {
+          console.error("An error occured:", error);  
         }
-
-        const response = chatBotInstance.executeCommand(command);
-        console.log(response);
+          
     }
-
 }
 
 main();

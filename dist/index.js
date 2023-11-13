@@ -21,14 +21,21 @@ function main() {
         const rl = promises_1.default.createInterface({ input: process_1.stdin, output: process_1.stdout });
         let isRunning = true;
         while (isRunning) {
-            const command = yield rl.question("Enter the commands 'help', 'greet', 'weather' or type 'exit' to quit:");
-            if (command.toLowerCase() === "exit") {
-                console.log("Goodbye!");
-                rl.close();
-                isRunning = false;
+            try {
+                const command = yield rl.question("Enter the commands 'help', 'greet', 'weather' or type 'exit' to quit:");
+                if (command.toLowerCase() === "exit") {
+                    console.log("Goodbye!");
+                    rl.close();
+                    isRunning = false;
+                }
+                else {
+                    const response = chatBotInstance.executeCommand(command);
+                    console.log(response);
+                }
             }
-            const response = chatBotInstance.executeCommand(command);
-            console.log(response);
+            catch (error) {
+                console.error("An error occured:", error);
+            }
         }
     });
 }
