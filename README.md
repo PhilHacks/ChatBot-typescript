@@ -24,7 +24,7 @@
 ### **Installation**
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/chatbot-app.git
+   git clone https://github.com/PhilHacks/chatbot-app.git
    ```
 
 2. **Enter the Project Directory:**
